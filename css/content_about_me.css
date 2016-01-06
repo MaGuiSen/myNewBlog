@@ -1,0 +1,26 @@
+.main_bg {
+    padding-top: 10px;
+    width: 100%;
+    background-color: rgba(228, 228, 228, 1);
+}
+
+.content {
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 685px;
+    background-color: white;
+    min-height: 482px;
+}
+
+.avatar {
+    width: 120px;
+    margin: 0 auto;
+    display: block;
+    height: 120px;
+}
+
+@media only screen and (max-width: 600px){
+    .content{
+        width: 100%;
+       }
+}

@@ -1,0 +1,29 @@
+.nav_bar {
+    background-color: rgba(0, 169, 169, 1);
+    height: 50px;
+    line-height: 50px;
+    width: 685px;
+    margin: 0 auto;
+}
+
+.nav_bar_brand {
+    font-size: 20px;
+    float: left;
+    font-weight: 100;
+    color: white;
+}
+
+.nav_bar_operate {
+    font-size: 14px;
+    float: right;
+    font-weight: 100;
+    color: white;
+    margin-right: 20px;
+}
+@media only screen and (max-width: 600px){
+    .nav_bar{
+        width: 100%;
+    }
+}
+
+

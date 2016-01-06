@@ -1,0 +1,36 @@
+.main_bg {
+    padding-top: 10px;
+    width: 100%;
+    background-color: rgba(228, 228, 228, 1);
+}
+
+.content {
+    background-color: white;
+    margin: 0 auto;
+    width: 685px;
+    min-height: 482px;
+}
+
+p.title {
+    font-size: 20px;
+    font-weight: 500;
+    color: inherit;
+    margin-bottom: 5px;
+}
+
+p.time {
+    color: #a2a2a2;
+    margin-bottom: 5px;
+    font-size: 14px
+}
+
+p.desc {
+    color: #828282;
+    line-height: 1.7;
+    font-size: 14px
+}
+@media only screen and (max-width: 600px){
+    .content{
+        width: 100%;
+      }
+}

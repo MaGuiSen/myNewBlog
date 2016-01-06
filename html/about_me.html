@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../css/base.css">
+    <link type="text/css" rel="stylesheet" href="../css/nav_bar.css">
+    <link type="text/css" rel="stylesheet" href="../css/content_about_me.css">
+    <link type="text/css" rel="stylesheet" href="../css/footer.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+    <title></title>
+</head>
+<body>
+<!--顶部-->
+<div class="nav_bar clearfix">
+    <!--左边大标题-->
+    <a class="nav_bar_brand goBlogList" href="#" target="_self">为心动而出发</a>
+    <!--右边操作：博客，关于我，留言板，感谢-->
+    <a class="nav_bar_operate goGiveMoney" href="#" target="_self">感谢</a>
+    <a class="nav_bar_operate goLeaveMsg" href="#" target="_self">留言板</a>
+    <a class="nav_bar_operate goAboutMe" href="#" target="_self">关于我</a>
+    <a class="nav_bar_operate goBlogList" href="#" target="_self">博客</a>
+</div>
+<div class="main_bg">
+    <!--内容区-->
+    <div class="content">
+        <img class="avatar" src="../images/me.png">
+        <!--介绍-->
+        <div style="color: #555555;padding: 20px">
+            <!--标题-->
+            <h2 style="font-weight: 600">介绍</h2>
+            <!--内容-->
+            <br/>
+            <p>
+                Hello，大家好，我是，网名，在深圳的湖北人。开源中国移动开发工程师，《》新媒体推广产品经理，负责电影推广营销事项。
+                KJFrameForAndroid》开发框架作者。爱看书，爱敲码，善于交流，乐于分享。曾担任电影《天籁：一万年以后》
+                <br/><br/>
+                最喜欢的话：”无论何时，请保持学者的谦逊与宽容。” 告诉我这句话的人是除了我的大学老师外，第一个真正把我带入编程世界的大神。而我却至今不知道他的名字。
+                个人标签：创业者、技术宅
+                关注主题：移动应用开发、新媒体营销、商业思考、项目管理
+            </p>
+        </div>
+        <!--联系方式-->
+        <div>
+            <div style="color: #555555;padding: 20px">
+                <!--标题-->
+                <h2 style="font-weight: 600">联系方式</h2>
+                <!--内容-->
+                <br/>
+                <p>
+                    一般我在网上用「kymjs」这个ID进行交流。
+                    <br/>
+                    可以通过电子邮件跟我联系：kymjs123@gmail.com
+                    <br/>
+                    另外，你还可以通过以下方式找到我：
+                    <br/>
+                    * 个人QQ/微信：766136833 (上班时间不接闲聊)
+                    <br/>
+                    * QQ群：257053751， 201055521
+                    <br/>
+                    * 微信公众号：Android技术分享
+                    <br/>
+                </p>
+            </div>
+        </div>
+
+        <!--评论部分-->
+        <div style="border-top: #e4e4e4 solid 15px;padding:10px 20px">
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="请替换成文章的标题"
+                 data-url="请替换成文章的网址"></div>
+            <!-- 多说评论框 end -->
+            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name: "magslive"};
+                (function () {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';
+                    ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+            </script>
+            <!-- 多说公共JS代码 end -->
+
+        </div>
+    </div>
+
+    <!--回到顶部-->
+    <div id="returnTop">
+    </div>
+
+    <!-- 底部-->
+    <div class="footer">
+        <!--微信图标，QQ二维码图标-->
+        <div style="margin:10px auto;width: 350px" class="clearfix">
+            <div class="left txt_center">
+                <img class="e_code_img" src="../images/e_code.png"/>
+                <p class="e_code_txt">微信关注</p>
+            </div>
+            <div style="margin-left: 10px" class="left txt_center">
+                <img class="e_code_img" src="../images/e_code.png"/>
+                <p class="e_code_txt">QQ关注</p>
+            </div>
+            <div style="margin-left:30px;" class="left attach_txt">
+                QQ：1059876295<br/>
+                <a style="color:white" href="http://www.baidu.com" target="_blank">github：MaGuiSen</a>
+            </div>
+        </div>
+        <!--QQ号码，github-->
+    </div>
+</div>
+</body>
+</html>

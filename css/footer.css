@@ -1,0 +1,31 @@
+.footer {
+    padding-top: 5px;
+    bottom: 0px;
+    height: 120px;
+    width: 100%;
+    background-color: rgba(0, 169, 169, 1);
+}
+
+.txt_center {
+    text-align: center;
+}
+
+.e_code_img {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+.e_code_txt {
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.attach_txt {
+    padding-top: 30px;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+

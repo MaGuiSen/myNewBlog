@@ -1,0 +1,21 @@
+.main_bg {
+    padding-top: 10px;
+    width: 100%;
+    background-color: rgba(228, 228, 228, 1);
+}
+
+.content {
+    background-color: white;
+    margin: 0 auto;
+    width: 685px;
+    min-height: 482px;
+}
+
+td{
+    padding:5px 10px
+}
+
+@media only screen and (max-width: 600px){
+    .content{
+        width: 100%;}
+}
