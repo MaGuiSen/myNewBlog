@@ -1,0 +1,67 @@
+---
+layout: page
+---
+<link type="text/css" rel="stylesheet" href="/css/content_blog_detail.css">
+<!--内容区-->
+<div class="content" style="padding-bottom: 10px">
+    <!--标题栏-->
+    <div style="padding: 10px 20px;border-bottom: #e4e4e4 solid 2px">
+        <p class="title">
+            {% if post.type == '随笔'%}
+                <span style="color:#FF8000">
+                      {{page.type}}
+                </span>
+            {% elsif post.type == '技术' %}
+                <span style="color:#64ff82">
+                      {{page.type}}
+                </span>
+            {% else %}
+                <span style="color:#cdff97">
+                      {{page.type}}
+                </span>
+            {% endif %}
+                <span style="color:#555555">
+                    :{{page.title}}
+                </span>
+        </p>
+        <!--作者-->
+        <p class="time">{{page.time}} By {{page.author}}</p>
+    </div>
+
+    <!--详情部分-->
+    <div style="padding: 10px 20px;">
+
+        {{ content }}
+
+    </div>
+    <!--打赏部分-->
+    <div style="margin-top:20px;padding: 10px 10px;">
+        <div style="border-left: coral solid 4px;height: 70px;background-color:#e4e4e4;padding: 20px">
+            <p class="desc">如果大伙觉得这篇文章有用，给个赏支持一下呗</p>
+            <br/>
+            <a href="give_money.html" target="_self"
+               style="padding: 5px 10px;background-color: rgba(51, 108, 221,1);color: white;border-radius: 5px;font-weight: 100">￥打赏支持</a>
+        </div>
+    </div>
+    <!--评论部分-->
+    <div style="border-top: #e4e4e4 solid 15px;padding:10px 20px">
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="请替换成文章的标题"
+             data-url="请替换成文章的网址"></div>
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name: "magslive"};
+            (function () {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';
+                ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+        <!-- 多说公共JS代码 end -->
+    </div>
+</div>

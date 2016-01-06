@@ -13,16 +13,16 @@ $(document).ready(function () {
             }
         });
         $(".goBlogList").bind("click", function () {
-            $(".goBlogList").attr('href','../html/blog_list.html');
+            $(".goBlogList").attr('href','/html/blog_list.html');
         });
         $(".goGiveMoney").bind("click", function () {
-            $(".goGiveMoney").attr('href','../html/give_money.html');
+            $(".goGiveMoney").attr('href','/html/give_money.html');
         });
         $(".goLeaveMsg").bind("click", function () {
-            $(".goLeaveMsg").attr('href','../html/leave_msg.html');
+            $(".goLeaveMsg").attr('href','/html/leave_msg.html');
         });
         $(".goAboutMe").bind("click", function () {
-            $(".goAboutMe").attr('href','../html/about_me.html');
+            $(".goAboutMe").attr('href','/html/about_me.html');
         });
     })();
 });
