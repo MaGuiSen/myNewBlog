@@ -24,6 +24,12 @@ $(document).ready(function () {
         $(".goAboutMe").bind("click", function () {
             $(".goAboutMe").attr('href','/html/about_me.html');
         });
+        /**
+         * 菜单动作按钮
+         */
+        $("#mobile_menu_pull").bind("click", function () {
+            $("#mobile_menu").slideToggle();
+        });
     })();
 });
 

@@ -7,16 +7,16 @@ layout: page
     <!--标题栏-->
     <div style="padding: 10px 20px;border-bottom: #e4e4e4 solid 2px">
         <p class="title">
-            {% if post.type == '随笔'%}
+            {% if page.type == '随笔'%}
                 <span style="color:#FF8000">
                       {{page.type}}
                 </span>
-            {% elsif post.type == '技术' %}
+            {% elsif page.type == '技术' %}
                 <span style="color:#64ff82">
                       {{page.type}}
                 </span>
             {% else %}
-                <span style="color:#cdff97">
+                <span style="color:#aedd1b">
                       {{page.type}}
                 </span>
             {% endif %}
@@ -39,15 +39,15 @@ layout: page
         <div style="border-left: coral solid 4px;height: 70px;background-color:#e4e4e4;padding: 20px">
             <p class="desc">如果大伙觉得这篇文章有用，给个赏支持一下呗</p>
             <br/>
-            <a href="give_money.html" target="_self"
+            <a class="goGiveMoney" href="#" target="_self"
                style="padding: 5px 10px;background-color: rgba(51, 108, 221,1);color: white;border-radius: 5px;font-weight: 100">￥打赏支持</a>
         </div>
     </div>
     <!--评论部分-->
     <div style="border-top: #e4e4e4 solid 15px;padding:10px 20px">
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="请替换成文章的标题"
-             data-url="请替换成文章的网址"></div>
+        <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{page.title}}"
+             data-url="{{page.url}}"></div>
         <!-- 多说评论框 end -->
         <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
         <script type="text/javascript">

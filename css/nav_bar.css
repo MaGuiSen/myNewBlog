@@ -20,9 +20,40 @@
     color: white;
     margin-right: 20px;
 }
-@media only screen and (max-width: 600px){
-    .nav_bar{
+
+#mobile_menu {
+    width: 100%;
+    background-color: rgba(0, 169, 169, 1);
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    z-index: 10000;
+}
+
+#mobile_menu li {
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+}
+
+#mobile_menu_pull {
+    font-size: 20px;
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav_bar {
         width: 100%;
+    }
+
+    .nav_bar_operate {
+        display: none;
+    }
+
+    #mobile_menu_pull {
+        font-size: 20px;
+        display: block;
     }
 }
 
