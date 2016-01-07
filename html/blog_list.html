@@ -7,39 +7,96 @@ categories: jekyll update
 <link type="text/css" rel="stylesheet" href="../css/content_blog_list.css">
 <!--内容区-->
 <div class="content">
-    <!--列表-->
-    <div class="blog_list">
+    <!--分类滑动区域-->
+    <div style="width:100%;overflow-x:auto;scrollbar-base-color:#000000;padding: 5px 0px;">
+        <ul class="category-list clearfix" id="scroll_bg" style="margin:0 auto;isplay:inline-block;">
+            <div style="float: left;padding: 10px 10px;cursor:hand" data-cate="all">
+                [All]{{site.posts | size}}
+            </div>
+            {% for category in site.categories %}
+            <div style="cursor:hand;float:left;padding: 10px 10px;display: inline" data-cate="{{ category | first }}">
+                [{{ category | first }}]{{ category | last | size }}
+            </div>
+            {% endfor %}
+        </ul>
+    </div>
 
-        {% for post in site.posts %}
-        <div class="blog_list_item">
-            <a href="{{ post.url}}" target="_self">
-                <!--标题-->
-                <p class="title">
-                    {% if post.type == '随笔'%}
+    <div class="cate-posts">
+        <!--所有列表-->
+        <div class="blog_list" data-cate="all">
+            {% for post in site.posts %}
+            <div class="blog_list_item">
+                <a href="{{ post.url}}" target="_self">
+                    <!--标题-->
+                    <p class="title">
+                        {% if post.type == '随笔'%}
                         <span style="color:#FF8000">
                               {{post.type}}
                         </span>
-                    {% elsif post.type == '技术' %}
+                        {% elsif post.type == '技术' %}
                         <span style="color:#64ff82">
                               {{post.type}}
                         </span>
-                    {% else %}
+                        {% else %}
                         <span style="color:#aedd1b">
                               {{post.type}}
                         </span>
-                    {% endif %}
+                        {% endif %}
                         <span style="color:#555555">
                             :{{post.title}}
                         </span>
-                </p>
-                <!--作者-->
-                <p class="time">{{post.time}} By {{post.author}}</p>
-                <!--详情-->
-                <p class="desc">
-                    {{ post.desc }}
-                    <!--{{ post.content | truncatewords: 4}}-->
-                </p>
-            </a>
+                    </p>
+                    <!--作者-->
+                    <p class="time">{{post.time}} By {{post.author}}</p>
+                    <!--详情-->
+                    <p class="desc">
+                        {{ post.desc }}
+                        <!--{{ post.content | truncatewords: 4}}-->
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- 分类列表内容 -->
+        {% for category in site.categories %}
+        <div class="cates" data-cate="{{category | first}}">
+            {% for posts in category %}
+            {% for post in posts %}
+            {% if post.url %}
+            <div class="blog_list_item">
+                <a href="{{ post.url}}" target="_self">
+                    <!--标题-->
+                    <p class="title">
+                        {% if post.type == '随笔'%}
+                        <span style="color:#FF8000">
+                              {{post.type}}
+                        </span>
+                        {% elsif post.type == '技术' %}
+                        <span style="color:#64ff82">
+                              {{post.type}}
+                        </span>
+                        {% else %}
+                        <span style="color:#aedd1b">
+                              {{post.type}}
+                        </span>
+                        {% endif %}
+                        <span style="color:#555555">
+                            :{{post.title}}
+                        </span>
+                    </p>
+                    <!--作者-->
+                    <p class="time">{{post.time}} By {{post.author}}</p>
+                    <!--详情-->
+                    <p class="desc">
+                        {{ post.desc }}
+                        <!--{{ post.content | truncatewords: 4}}-->
+                    </p>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
         </div>
         {% endfor %}
     </div>

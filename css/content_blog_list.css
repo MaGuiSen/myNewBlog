@@ -1,5 +1,5 @@
 .main_bg {
-    padding-top: 10px;
+    padding-top: 0px;
     width: 100%;
     background-color: rgba(228, 228, 228, 1);
 }
@@ -41,6 +41,7 @@
     line-height: 1.7;
     font-size: 14px
 }
+
 
 @media only screen and (max-width: 600px) {
     .content {
