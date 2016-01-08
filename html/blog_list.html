@@ -11,11 +11,11 @@ categories: jekyll update
     <div style="width:100%;overflow-x:auto;scrollbar-base-color:#000000;padding: 5px 0px;">
         <ul class="category-list clearfix" id="scroll_bg" style="margin:0 auto;isplay:inline-block;">
             <div style="float: left;padding: 10px 10px;cursor:hand" data-cate="all">
-                [All]{{site.posts | size}}
+                All[{{site.posts | size}}]
             </div>
             {% for category in site.categories %}
             <div style="cursor:hand;float:left;padding: 10px 10px;display: inline" data-cate="{{ category | first }}">
-                [{{ category | first }}]{{ category | last | size }}
+                {{ category | first }}[{{ category | last | size }}]
             </div>
             {% endfor %}
         </ul>
