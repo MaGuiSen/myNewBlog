@@ -67,7 +67,7 @@ $(document).ready(function () {
         $("#scroll_bg div").each(function () {
             wz += $(this).outerWidth(true);
         });
-        $("#scroll_bg").css("width", wz);
+        $("#scroll_bg").css("width", wz+5);
     }
 })
 ;
