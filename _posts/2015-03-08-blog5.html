@@ -7,12 +7,21 @@ type: DIV
 categories: DIV
 desc: 
 ---
-<div>
- <img src="{{ "/assets/img/2015_11_25_1.jpg" | prepend: site.baseurl }}"/>
-</div>
-<div>
- <img src="{{ "/assets/img/2015_11_25_2.jpg" | prepend: site.baseurl }}"/>
-</div>
-<div>
- <img src="{{ "/assets/img/2015_11_25_3.jpg" | prepend: site.baseurl }}"/>
+<style>
+@media only screen and (max-width: 600px) {
+    div.div_img img{
+		width:100%;
+	} 
+}
+</style>
+<div class="div_img">
+	<div >
+	 <img src="{{ "/assets/img/2015_11_25_1.jpg" | prepend: site.baseurl }}"/>
+	</div>
+	<div>
+	 <img src="{{ "/assets/img/2015_11_25_2.jpg" | prepend: site.baseurl }}"/>
+	</div>
+	<div>
+	 <img src="{{ "/assets/img/2015_11_25_3.jpg" | prepend: site.baseurl }}"/>
+	</div>
 </div>

@@ -7,7 +7,14 @@ type: 实用
 categories: UseFul
 desc: 
 ---
-<div>
+<style>
+@media only screen and (max-width: 600px) {
+    div.div_img img{
+		width:100%;
+	} 
+}
+</style>
+<div class="div_img">
  <img src="{{ "/assets/img/useful/10003.jpg" | prepend: site.baseurl }}"/>
 </div>
 
