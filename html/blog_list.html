@@ -29,16 +29,16 @@ categories: jekyll update
                 <a href="{{ post.url}}" target="_self">
                     <!--标题-->
                     <p class="title">
-                        {% if post.type == '随笔'%}
+                        {% if post.type == '实用'%}
                         <span style="color:#FF8000">
                               {{post.type}}
                         </span>
-                        {% elsif post.type == '技术' %}
-                        <span style="color:#64ff82">
+                        {% elsif post.type == 'DIV' %}
+                        <span style="color:#aedd1b">
                               {{post.type}}
                         </span>
                         {% else %}
-                        <span style="color:#aedd1b">
+                        <span style="color:#64ff82">
                               {{post.type}}
                         </span>
                         {% endif %}

@@ -7,16 +7,16 @@ layout: page
     <!--标题栏-->
     <div style="padding: 10px 20px;border-bottom: #e4e4e4 solid 2px">
         <p class="title">
-            {% if page.type == '随笔'%}
+            {% if page.type == '实用'%}
                 <span style="color:#FF8000">
                       {{page.type}}
                 </span>
-            {% elsif page.type == '技术' %}
-                <span style="color:#64ff82">
+            {% elsif page.type == 'DIV' %}
+                <span style="color:#aedd1b">
                       {{page.type}}
                 </span>
             {% else %}
-                <span style="color:#aedd1b">
+                <span style="color:#64ff82">
                       {{page.type}}
                 </span>
             {% endif %}
