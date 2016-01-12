@@ -37,6 +37,10 @@ categories: jekyll update
                         <span style="color:#aedd1b">
                               {{post.type}}
                         </span>
+                        {% elsif post.type == '是真的吗' %}
+                        <span style="color:#ff326a">
+                              {{post.type}}
+                        </span>
                         {% else %}
                         <span style="color:#64ff82">
                               {{post.type}}
@@ -74,6 +78,10 @@ categories: jekyll update
                         </span>
                         {% elsif post.type == 'DIV' %}
                         <span style="color:#64ff82">
+                              {{post.type}}
+                        </span>
+                        {% elsif post.type == '是真的吗' %}
+                        <span style="color:#ff326a">
                               {{post.type}}
                         </span>
                         {% else %}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        section {
+            margin: 5em;
+        }
+
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            background: -moz-radial-gradient(10px 10px, circle, #eee, #333);
+            background: -webkit-radial-gradient(10px 10px, circle, #eee, #333);
+            cursor: pointer;
+            margin: 10px 0 0 0;
+        }
+
+        span.red {
+            background: -moz-radial-gradient(10px 10px, circle, red, #333);
+            background: -webkit-radial-gradient(10px 10px, circle, red, #333);
+            color: #fff;
+            font-weight: bold;
+        }
+
+        span.blue {
+            background: -moz-radial-gradient(10px 10px, circle, blue, #333);
+            background: -webkit-radial-gradient(10px 10px, circle, blue, #333);
+            color: #fff;
+            font-weight: bold;
+        }
+
+        section article {
+            width: 500px;
+            float: left;
+            overflow: hidden
+        }
+
+        section aside {
+            width: 200px;
+            margin-left: 30px;
+            overflow: hidden;
+            float: left;
+        }
+
+        section footer {
+            clear: both;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <article>
+        <span>01</span>
+        <span>02</span>
+        <span>03</span>
+        <span>04</span>
+        <span>05</span>
+        <span>06</span>
+        <span>07</span>
+        <span>08</span>
+        <span>09</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+        <span>17</span>
+        <span>18</span>
+        <span>19</span>
+        <span>20</span>
+        <span>21</span>
+        <span>22</span>
+        <span>23</span>
+        <span>24</span>
+        <span>25</span>
+        <span>26</span>
+        <span>27</span>
+        <span>28</span>
+        <span>29</span>
+        <span>30</span>
+        <span>31</span>
+        <span>32</span>
+        <span>33</span>
+        <span>34</span>
+        <span>35</span>
+    </article>
+    <aside>
+        <span>01</span>
+        <span>02</span>
+        <span>03</span>
+        <span>04</span>
+        <span>05</span>
+        <span>06</span>
+        <span>07</span>
+        <span>08</span>
+        <span>09</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+    </aside>
+    <footer>
+        <button style="width: 100px;height: 50px">生成</button>
+        <button  style="width: 100px;height: 50px">停止</button>
+    </footer>
+</section>
+</body>
+<script>
+    var c=0
+    var t;
+    var isRunning = 0;
+    var range = 1000;
+    function timedCount()
+    {
+        c=c+1;
+        t=setTimeout("repeat()",500);
+    }
+    function repeat()
+    {
+        if(c>range){
+            isRunning = 0;
+            t.clearTimeout();
+            return;
+        }
+        caculate ();
+        timedCount();
+    }
+    function start(){
+        if(isRunning == 0){
+            isRunning = 1;
+            c = 0;
+            repeat();
+        }
+
+    }
+    function stopCaculate(){
+        c = range + 1;
+        isRunning = 0;
+        t.clearTimeout();
+    }
+    function caculate () {
+        var leftNum = document.getElementsByTagName("article")[0].getElementsByTagName("span");
+        var rightNum = document.getElementsByTagName("aside")[0].getElementsByTagName("span");
+        var newLeft = getNum(35, 5);
+        var newRight = getNum(12, 2);
+        //红色球
+        function redCircle() {
+            //清除
+            for (var i = 0; i < leftNum.length; i++) {
+                leftNum[i].className = "";
+            }
+            //获取
+            for (var i = 0; i < newLeft.length; i++) {
+                leftNum[newLeft[i]].className = "red";
+            }
+        }
+
+        //蓝色球
+        function blueCircle() {
+            //清除
+            for (var i = 0; i < rightNum.length; i++) {
+                rightNum[i].className = "";
+            }
+            //获取
+            for (var i = 0; i < newRight.length; i++) {
+                rightNum[newRight[i]].className = "blue";
+            }
+        }
+
+        redCircle();
+        blueCircle();
+    }
+    var oBtn = document.getElementsByTagName("button")[0];
+    oBtn.addEventListener("click",start);
+    var oBtnStop = document.getElementsByTagName("button")[1];
+    oBtnStop.addEventListener("click",stopCaculate);
+    function getNum(n, l) {
+        var arr = [];
+        var randomNumber;
+        for (var i = 0; i < l; i++) {
+            function selectNumber() {
+                randomNumber = Math.floor(Math.random() * n);
+                (function checkNum() {
+                    for (var j = 0; j < arr.length; j++) {
+                        if (randomNumber == arr[j]) {
+                            randomNumber = Math.floor(Math.random() * n);
+                            checkNum();
+                        }
+                    }
+                })();
+                return randomNumber;
+            }
+
+            arr.push(selectNumber())
+        }
+        return arr;
+    }
+</script>
+</html>
